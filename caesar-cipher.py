@@ -6,18 +6,16 @@ yes_no = st.text_input("Do you wish to encrypt or decrypt your messages? (Encryp
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
 if yes_no == "Encrypt":
-
-  key = int(st.text_input("Please insert your key here: "))
-
-newMessage = ' '
-message = input("Please enter a message to encrypt: ")
-for character in message:
+  key = st.text_input("Please insert your key as an integer here: "))
+  newMessage = ' '
+  message = st.text_input("Please enter a message to encrypt: ")
+  for character in message:
     if character in alphabet:
-        position = alphabet.find(character)
-        newPosition = (position + key) % 26
-        newCharacter = alphabet[newPosition]
-        newMessage += newCharacter
+      position = alphabet.find(character)
+      newPosition = (position + key) % 26
+      newCharacter = alphabet[newPosition]
+      newMessage += newCharacter
     else:
-        newMessage += character
+      newMessage += character
 
  
