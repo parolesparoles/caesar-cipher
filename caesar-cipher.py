@@ -7,7 +7,7 @@ alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
 if yes_no == "Encrypt":
 
-  key = st.text_input("Please insert your key here: ")
+  key = int(st.text_input("Please insert your key here: "))
 
 newMessage = ' '
 message = input("Please enter a message to encrypt: ")
