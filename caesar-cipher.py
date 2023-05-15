@@ -6,7 +6,7 @@ yes_no = st.text_input("Do you wish to encrypt or decrypt your messages? (Encryp
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
 if yes_no == "Encrypt":
-  key = st.text_input("Please insert your key as an integer here: "))
+  key = st.text_input("Please insert your key as an integer here: ")
   newMessage = ' '
   message = st.text_input("Please enter a message to encrypt: ")
   for character in message:
