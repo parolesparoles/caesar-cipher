@@ -19,9 +19,5 @@ for character in message:
         newMessage += newCharacter
     else:
         newMessage += character
-print("Your new message is :", newMessage)
-elif yes_no == "Decrypt":
-  decrypt
-else: 
-  st.text("Please enter either 'Encrypt' or 'Decrypt'")
-  
+
+ 
