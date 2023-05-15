@@ -2,4 +2,26 @@ import streamlit as st
 
 st.title("Online Caesar Cipher Decipher Device")
 st.text("Welcome to Python's Online Caesar Cipher Decipher Device!")
-st.text_input("Do you wish to encrypt or decrypt your messages? (Encrypt/Decrypt)")
+yes_no = st.text_input("Do you wish to encrypt or decrypt your messages? (Encrypt/Decrypt)")
+
+def encrypt():
+  if yes_no == "Encrypt":
+  alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  key = st.text_input("Please insert your key here: ")
+
+newMessage = ' '
+message = input("Please enter a message to encrypt: ")
+for character in message:
+    if character in alphabet:
+        position = alphabet.find(character)
+        newPosition = (position + key) % 26
+        newCharacter = alphabet[newPosition]
+        newMessage += newCharacter
+    else:
+        newMessage += character
+print("Your new message is :", newMessage)
+elif yes_no == "Decrypt":
+  decrypt
+else: 
+  st.text("Please enter either 'Encrypt' or 'Decrypt'")
+  
