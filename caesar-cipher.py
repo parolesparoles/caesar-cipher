@@ -30,5 +30,3 @@ elif yes_no == "2":
     else:
       newMessage += character
 else:
-
- 
