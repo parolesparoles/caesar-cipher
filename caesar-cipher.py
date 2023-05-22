@@ -28,4 +28,4 @@ elif yes_no == "2":
       newMessage += newCharacter
     else:
       newMessage += character
-st.text(newMessage)
+st.text("Your new message is", newMessage)
