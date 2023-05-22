@@ -4,10 +4,9 @@ st.title("Online Caesar Cipher Decipher Device")
 st.text("Welcome to Python's Online Caesar Cipher Decipher Device!")
 yes_no = st.text_input("Do you wish to encrypt or decrypt your messages? (Press 1 for encryption, press 2 for decryption")
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
-
+newMessage = ' '
 if yes_no == "1":
   key = st.text_input("Please insert your key as an integer here: ")
-  newMessage = ' '
   message = st.text_input("Please enter a message to encrypt: ")
   for character in message:
     if character in alphabet:
@@ -18,8 +17,7 @@ if yes_no == "1":
     else:
       newMessage += character
 elif yes_no == "2":
-    key = st.text_input("Please insert your key as an integer here: ")
-  newMessage = ' '
+  key = st.text_input("Please insert your key as an integer here: ")
   message = st.text_input("Please enter a message to decrypt: ")
   for character in message:
     if character in alphabet:
