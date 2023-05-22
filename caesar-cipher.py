@@ -17,6 +17,6 @@ if yes_no == "Encrypt":
       newMessage += newCharacter
     else:
       newMessage += character
-print("Your new message is :", newMessage)
+st.text("Your new message is :", newMessage)
 
  
