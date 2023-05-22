@@ -7,8 +7,7 @@ alphabet = 'abcdefghijklmnopqrstuvwxyz'
 newMessage = ' '
 
 if yes_no == "1":
-  key = st.text_input("Please insert your key as an integer here: ")
-  key = int(key)
+  int(key) = st.text_input("Please insert your key as an integer here: ")
   message = st.text_input("Please enter a message to encrypt: ")
   for character in message:
     if character in alphabet:
