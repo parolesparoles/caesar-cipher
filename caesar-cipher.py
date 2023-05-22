@@ -11,7 +11,7 @@ if yes_no == "1":
   for character in message:
     if character in alphabet:
       position = alphabet.find(character)
-      newPosition = (position + key) % 26
+      newPosition = (position + key)
       newCharacter = alphabet[newPosition]
       newMessage += newCharacter
     else:
