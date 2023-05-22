@@ -17,6 +17,6 @@ if yes_no == "1":
       newMessage += newCharacter
     else:
       newMessage += character
-st.text("Your new message is :" + newMessage)
+
 
  
