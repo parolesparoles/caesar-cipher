@@ -33,5 +33,5 @@ def encryption_decryption():
         newMessage += character
   else:
     st.text("Error detected. Please refresh the page and try again.")
-  st.text("Your new message is", newMessage)
 encryption_decryption()
+st.text("Your new message is", newMessage)
