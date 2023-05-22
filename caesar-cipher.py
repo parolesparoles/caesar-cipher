@@ -17,6 +17,18 @@ if yes_no == "1":
       newMessage += newCharacter
     else:
       newMessage += character
-
+elif yes_no == "2":
+    key = st.text_input("Please insert your key as an integer here: ")
+  newMessage = ' '
+  message = st.text_input("Please enter a message to decrypt: ")
+  for character in message:
+    if character in alphabet:
+      position = alphabet.find(character)
+      newPosition = (position - key) % 26
+      newCharacter = alphabet[newPosition]
+      newMessage += newCharacter
+    else:
+      newMessage += character
+  
 
  
