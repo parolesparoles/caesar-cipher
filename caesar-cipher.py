@@ -34,4 +34,4 @@ def encryption_decryption():
   else:
     st.text("Error detected. Please refresh the page and try again.")
 encryption_decryption()
-st.text("Your new message is", newMessage)
+st.text(newMessage)
