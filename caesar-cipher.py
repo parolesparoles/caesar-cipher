@@ -6,32 +6,31 @@ yes_no = st.text_input("Do you wish to encrypt or decrypt your messages? (Press 
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 newMessage = ' '
 
-def encryption_decryption():
-  if yes_no == "1":
-    key = st.text_input("Please insert your key as an integer here: ")
-    key = int(key)
-    message = st.text_input("Please enter a message to encrypt: ")
-    for character in message:
-      if character in alphabet:
-        position = alphabet.find(character)
-        newPosition = (position + key)
-        newCharacter = alphabet[newPosition]
-        newMessage += newCharacter
-      else:
-        newMessage += character
-  elif yes_no == "2":
-    key = st.text_input("Please insert your key as an integer here: ")
-    key = int(key)
-    message = st.text_input("Please enter a message to decrypt: ")
-    for character in message:
-      if character in alphabet:
-        position = alphabet.find(character)
-        newPosition = (position - key) % 26
-        newCharacter = alphabet[newPosition]
-        newMessage += newCharacter
-      else:
-        newMessage += character
-  else:
-    st.text("Error detected. Please refresh the page and try again.")
+if yes_no == "1":
+  key = st.text_input("Please insert your key as an integer here: ")
+  key = int(key)
+  message = st.text_input("Please enter a message to encrypt: ")
+  for character in message:
+    if character in alphabet:
+      position = alphabet.find(character)
+      newPosition = (position + key)
+      newCharacter = alphabet[newPosition]
+      newMessage += newCharacter
+    else:
+      newMessage += character
+elif yes_no == "2":
+  key = st.text_input("Please insert your key as an integer here: ")
+  key = int(key)
+  message = st.text_input("Please enter a message to decrypt: ")
+  for character in message:
+    if character in alphabet:
+      position = alphabet.find(character)
+      newPosition = (position - key) % 26
+      newCharacter = alphabet[newPosition]
+      newMessage += newCharacter
+    else:
+      newMessage += character
+else:
+  st.text("Error detected. Please refresh the page and try again.")
 encryption_decryption()
 st.text(newMessage)
