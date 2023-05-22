@@ -28,6 +28,4 @@ elif yes_no == "2":
       newMessage += newCharacter
     else:
       newMessage += character
-else:
-  st.text("Error detected. Please refresh the page and try again.")
 st.text(newMessage)
