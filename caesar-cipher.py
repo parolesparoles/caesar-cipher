@@ -30,5 +30,4 @@ elif yes_no == "2":
       newMessage += character
 else:
   st.text("Error detected. Please refresh the page and try again.")
-encryption_decryption()
 st.text(newMessage)
