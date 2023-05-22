@@ -7,7 +7,7 @@ alphabet = 'abcdefghijklmnopqrstuvwxyz'
 newMessage = ' '
 
 if yes_no == "1":
-  key = st.text_input(int("Please insert your key as an integer here: "))
+  key = st.number_input(Please insert your key as an integer here: ", 0, 26)
   message = st.text_input("Please enter a message to encrypt: ")
   for character in message:
     if character in alphabet:
@@ -18,8 +18,7 @@ if yes_no == "1":
     else:
       newMessage += character
 elif yes_no == "2":
-  key = st.text_input("Please insert your key as an integer here: ")
-  key = int(key)
+  key = st.number_input(Please insert your key as an integer here: ", 0, 26)
   message = st.text_input("Please enter a message to decrypt: ")
   for character in message:
     if character in alphabet:
