@@ -1,8 +1,7 @@
 import streamlit as st
 
 st.title("Online Caesar Cipher Decipher Device")
-st.text("Welcome to Python's Online Caesar Cipher Decipher Device!")
-st.text("Do you wish to encrypt or decrypt your messages?")
+st.header("Welcome to Python's Online Caesar Cipher Decipher Device!")
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 newMessage = ' '
 key = st.number_input("Please insert your key as an integer here: ", 0, 26)
