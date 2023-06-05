@@ -6,7 +6,7 @@ st.text("Do you wish to encrypt or decrypt your messages?")
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 newMessage = ' '
 
-while st.button("Encryption"):
+if st.button("Encryption"):
   key = st.number_input("Please insert your key as an integer here: ", 0, 26)
   message = st.text_input("Please enter a message to encrypt: ")
   for character in message:
@@ -18,7 +18,7 @@ while st.button("Encryption"):
     else:
       newMessage += character
       
-while st.button("Decryption"):
+if st.button("Decryption"):
   key = st.number_input("Please insert your key as an integer here: ", 0, 26)
   message = st.text_input("Please enter a message to decrypt: ")
   for character in message:
